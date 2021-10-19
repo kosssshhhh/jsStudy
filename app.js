@@ -1,9 +1,27 @@
-const player = {
-    name: "nico",
-    sayHello: function(otherPersonsName){
-        console.log("hello! " + otherPersonsName + " nice to meet you");
+const caculator = {
+    plus: function(a, b){
+        console.log(a + b);
     },
-};
 
-console.log(player.name);
-player.sayHello("kosh");
+    minus: function(a,b){
+        console.log(a - b);
+    },
+
+    mul: function(a,b){
+        console.log(a * b);
+    },
+
+    div: function(a,b){
+        console.log(a/b);
+    },
+
+    square: function(a, b){
+        console.log(a**b);
+    }
+}
+
+caculator.plus(10, 6);
+caculator.minus(10, 6);
+caculator.mul(10, 6);
+caculator.div(10, 6);
+caculator.square(10, 6);
