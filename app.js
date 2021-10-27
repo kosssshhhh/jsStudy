@@ -1,27 +1,29 @@
-const caculator = {
-    plus: function(a, b){
-        console.log(a + b);
-    },
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form");
+const greeting = document.querySelector("#greeting");
 
-    minus: function(a,b){
-        console.log(a - b);
-    },
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
-    mul: function(a,b){
-        console.log(a * b);
-    },
-
-    div: function(a,b){
-        console.log(a/b);
-    },
-
-    square: function(a, b){
-        console.log(a**b);
+function onLoginSubmit(event){
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
     }
+
+function paintGreetings(username){
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+    greeting.innerText = `Hello ${username}`;
 }
 
-caculator.plus(10, 6);
-caculator.minus(10, 6);
-caculator.mul(10, 6);
-caculator.div(10, 6);
-caculator.square(10, 6);
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if(savedUsername == null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+}   
+else{
+    paintGreetings(savedUsername);
+}
