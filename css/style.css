@@ -1,3 +1,52 @@
 .hidden {
-  display: none;
+  opacity: 0;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
+
+#greeting,
+#login-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#todo-form {
+  display: flex;
+  justify-content: center;
+}
+
+#todo-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#background-img {
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
 }
