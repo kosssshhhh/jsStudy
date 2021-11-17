@@ -43,10 +43,34 @@
 
 #background-img {
   position: absolute;
-
+  opacity: 0.6;
   top: 0;
   left: 10%;
   width: 80%;
   height: 100%;
   z-index: -1;
+}
+
+#todo-list li {
+  margin-bottom: 15px;
+}
+
+#todo-list li button {
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  right: 300px;
+}
+
+#todo-list li span {
+  border-bottom: 2px solid black;
+  margin-right: 15px;
+}
+
+#quote {
+  font-size: 25px;
+}
+
+#weather {
+  font-size: 25px;
 }
